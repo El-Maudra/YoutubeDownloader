@@ -1,13 +1,13 @@
 # Compiling Kivy project to APK file.
 
 ## Step 1: Setting up Windows Subsystem for Linux (Windows Users ONLY)
-### Install Windows Subsystem for Linux (WSL) [Link](https://learn.microsoft.com/en-us/windows/wsl/install-manual)
+#### Install Windows Subsystem for Linux (WSL) [Link](https://learn.microsoft.com/en-us/windows/wsl/install-manual)
 Ensure powershell is running as administrator and run the below commands
 - [x] `dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart`
 - [x] `dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart`
 - [x] Now restart your computer for the effects to take place (installing the wsl)
 
-### Download the Linux kernel update package
+#### Download the Linux kernel update package
 The Linux kernel update package installs the most recent version of the WSL 2 Linux kernel for running WSL inside the Windows operating system image.
 - [x] [Download](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) latest package
 
@@ -16,11 +16,11 @@ Open powershell and run the below command (set WSL 2 as the default version when
 - [x] Open the [Microsoft Store](https://aka.ms/wslstore) and select your favorite Linux distribution.
 
 ## Step 2: Getting started with your current working directory on your pc, and wsl
-### Create your current working directory (cwd)
+#### Create your current working directory (cwd)
 - [x] You want to create your cwd near the root folder of your pc. For example `c/Users/<yourname>/Documents/cwd`
 Change `<yourname>` with your `pc name` or `username`, and cwd with your `project_folder_name`, where all your code will be hosted.
 
-### Open your Linux Distribution from the Applications
+#### Open your Linux Distribution from the Applications
 1. If your Linux Distribution was Debian, go to Start/Windows Key, then run Debian, if it was Ubuntu, go to Start/Windows Key then run Ubuntu.
 2. A terminal will open. Set your username and your password.
 3. Now you will navigate from your wsl terminal to your cwd in your pc.</br>
@@ -28,7 +28,7 @@ Change `<yourname>` with your `pc name` or `username`, and cwd with your `projec
    3.2 On your wsl terminal, write the following code **`cd/mnt/c/Users/<yourname>/Documents/cwd`**. Remember to adjust to fit your cwd, and username or pc name.</br>
 4. Good Progress!
 ## Step 3: Installing buildozer and its dependencies [Link](https://buildozer.readthedocs.io/en/latest/installation.html)
-### Install buildozer
+#### Install buildozer
 Run your Linux Distribution again from Windows Applications (Windows Key > Linux Distribution)
 - [x] Run `pip3 install --user --upgrade buildozer`, if error, run `sudo apt update`, enter password and click Enter.
 - [x] Then run `sudo apt install python3-pip`, type `y` when prompted and click Enter.
@@ -36,7 +36,7 @@ Run your Linux Distribution again from Windows Applications (Windows Key > Linux
 
 Great Progress!!
 
-### install buildozer dependencies
+#### install buildozer dependencies
 From the documentation, you are required to run the following codes line by line:
       
       sudo apt update
@@ -46,7 +46,7 @@ From the documentation, you are required to run the following codes line by line
       # add the following line at the end of your ~/.bashrc file
       export PATH=$PATH:~/.local/bin/
 
-But we have already executed the firt line of code `sudo apt update`, so we do not need to repeat the tast!
+But we have already executed the firt line of code `sudo apt update`, so we do not need to repeat the task!
 
 We now execute each of the remaining codes.
 - [x] `sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev`
@@ -80,7 +80,7 @@ Run the below commands in Powershell
 
 Take note of the version and compare if it is the same with wsl. (I will assume so since both have been installed the same day). If not, downgrade one, or upgrade one.
 
-### Open your Android phone
+#### Open your Android phone
 Go to
 * Settings > About phone > Search for build number
 * Tap build number 7 times to enable developer mode.
@@ -88,7 +88,7 @@ Go to
 * Go to Additional Information > Developer options or just search Developer options (Dependent with Android)
 * Turn on `USB Debugging`
 
-### Initialize Buildozer
+#### Initialize Buildozer
 Run the following commands
 - [x] `buildozer init` this initializes the SPEC file.
 
@@ -102,19 +102,19 @@ Inside the SPEC file, make sure to change
 3. requirements = requirements = python3,kivy==2.3.0 *be very specific here and include versions of packages*
 4. Click Save file
 
-### Turn on Android Debug Bridge
+#### Turn on Android Debug Bridge
 On your powershell, run
 1. ./adb start-server
-2. ./adb devices *this should detect your android device since you turned on USB Debugging*
+2. ./adb devices - *this should detect your android device since you turned on USB Debugging*
 
 Good Progress so far!!
 
 ## Step 5: Compile Kivy project to Android
-### Sorting Permissions in wsl
+#### Sorting Permissions in wsl
 Run the following code in wsl
-- [x] `sudo mount -t drvfs C: /mnt/c -o metadata` and enter your password *this gets rids of permission errors*
+- [x] `sudo mount -t drvfs C: /mnt/c -o metadata` and enter your password - *this gets rids of permission errors*
 
-### Compiling code to APK
+#### Compiling code to APK
 Run the following code on wsl
 - [x] `buildozer -v android debug`
 
