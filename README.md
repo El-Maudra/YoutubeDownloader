@@ -9,7 +9,7 @@ Ensure powershell is running as administrator and run the below commands
 
 #### Download the Linux kernel update package
 The Linux kernel update package installs the most recent version of the WSL 2 Linux kernel for running WSL inside the Windows operating system image.
-- [x] [Download](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) latest package
+- [x] [Download](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi) and install the latest package
 
 Open powershell and run the below command (set WSL 2 as the default version when installing a new Linux distribution)
 - [x] Run `wsl --set-default-version 2`
