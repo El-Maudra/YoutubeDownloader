@@ -1,4 +1,4 @@
-# Converting Kivy, KivyMD using Buildozer to APK file.
+# Compiling Kivy, KivyMD using Buildozer to APK file.
 
 ## Step 1: Setting up Windows Subsystem for Linux (Windows Users ONLY)
 ### Install Windows Subsystem for Linux (WSL) [Link](https://learn.microsoft.com/en-us/windows/wsl/install-manual)
