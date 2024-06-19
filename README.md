@@ -28,8 +28,18 @@ Change `<yourname>` with your `pc name` or `username`, and cwd with your `projec
 4. Good Progress!
 ## Step 3: Installing buildozer and its dependencies [Link](https://buildozer.readthedocs.io/en/latest/installation.html)
 Run your Linux Distribution again from Windows Applications (Windows Key > Linux Distribution)
-- [x] `pip3 install --user --upgrade buildozer`
-- [x] If error, `sudo apt update`, enter password and click Enter
-- [x] Then run `sudo apt install python3-pip`, type `y` when prompted and click Enter
-- [x] 
+- [x] Run `pip3 install --user --upgrade buildozer`, if error, run `sudo apt update`, enter password and click Enter.
+- [x] Then run `sudo apt install python3-pip`, type `y` when prompted and click Enter.
+- [x] Then rerun `pip3 install --user --upgrade buildozer`
+Great Progress!!
+
+From the documentation, you are advised to run the following codes line by line:
+      ```
+      sudo apt update
+      sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
+      pip3 install --user --upgrade Cython==0.29.33 virtualenv  # the --user should be removed if you do this in a venv
+      
+      # add the following line at the end of your ~/.bashrc file
+      export PATH=$PATH:~/.local/bin/
+      ```
 
