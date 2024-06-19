@@ -23,8 +23,8 @@ Change `<yourname>` with your `pc name` or `username`, and cwd with your `projec
 1. If your Linux Distribution was Debian, go to Start/Windows Key, then run Debian, if it was Ubuntu, go to Start/Windows Key then run Ubuntu.
 2. A terminal will open. Set your username and your password.
 3. Now you will navigate from your wsl terminal to your cwd in your pc.
-3.1. Copy the path of your current working directory. Should look something like this `c/Users/<yourname>/Documents/cwd`.
-3.2. On your wsl terminal, write the following code **`cd/mnt/c/Users/<yourname>/Documents/cwd`**. Remember to adjust to fit your cwd, and username or pc name.
+   3.1 Copy the path of your current working directory. Should look something like this `c/Users/<yourname>/Documents/cwd`.
+   3.2 On your wsl terminal, write the following code **`cd/mnt/c/Users/<yourname>/Documents/cwd`**. Remember to adjust to fit your cwd, and username or pc name.
 4. Good Progress!
-5. 
+5.  
 
