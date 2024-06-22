@@ -118,8 +118,11 @@ Run the following code in wsl
 Run the following code on wsl
 - [x] `buildozer -v android debug`
 
+## Congrats!
+- [x] On your file explorer, you should be able to spot your phone, which you connected with your laptop via USB Debugging.
+- [x] Save your apk file to the destination of your choice.
 
-
+Click install.
 
 
 
